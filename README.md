@@ -3,6 +3,23 @@ A browser interface based on Gradio library for Stable Diffusion.
 
 ![](screenshot.png)
 
+## Usage
+
+```bash
+# 启动后访问 http://127.0.0.1:7860/
+./webui.sh
+# 启用 xformers 加速
+./webui.sh --xformers
+
+# python 环境
+source venv/bin/activate
+
+# ssh local 代理
+ssh -L 127.0.0.1:7860:127.0.0.1:7860 your-server
+
+```
+
+
 ## Features
 [Detailed feature showcase with images](https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Features):
 - Original txt2img and img2img modes
