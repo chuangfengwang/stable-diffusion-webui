@@ -6,13 +6,19 @@ A browser interface based on Gradio library for Stable Diffusion.
 ## Usage
 
 ```bash
+# [可选]安装 TCMalloc,加速用
+sudo apt install google-perftools
+# 安装(首次启动会执行安装)
+./webui.sh
+
+# 如果存在包依赖冲突,在 python 环境中安装已经验证可行的包版本
+source venv/bin/activate
+pip install -r requirements_installed.txt
+
 # 启动后访问 http://127.0.0.1:7860/
 ./webui.sh
 # 启用 xformers 加速
 ./webui.sh --xformers
-
-# python 环境
-source venv/bin/activate
 
 # ssh local 代理
 ssh -L 127.0.0.1:7860:127.0.0.1:7860 your-server
