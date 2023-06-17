@@ -19,6 +19,8 @@ pip install -r requirements_installed.txt
 ./webui.sh
 # 启用 xformers 加速
 ./webui.sh --xformers
+# 指定端口并在后台运行
+nohup ./webui.sh --xformers --listen --port 34860 >>run.log 2>&1 &
 
 # ssh local 代理
 ssh -L 127.0.0.1:7860:127.0.0.1:7860 your-server
